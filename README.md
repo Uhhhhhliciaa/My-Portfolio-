@@ -1,2 +1,2 @@
 # My-SQL Portfolio-
-My data analyst portfolio 
+Welcome to my SQL portfolio. 
