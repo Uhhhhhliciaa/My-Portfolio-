@@ -1,0 +1,38 @@
+Create a coffee database and table 
+
+Create Database an_coffee;
+
+CREATE TABLE coffee_table  (Id INTEGER PRIMARY KEY, Name VARCHAR(255), Region VARCHAR(255), Roast VARCHAR(255), Price INTEGER);
+
+INSERT INTO coffee_table VALUES (1, "Brewed Awakening", "Ethopia", "Dark", 9.99);
+INSERT INTO coffee_table VALUES (2, "The Carajillo", "Mexico", "Dark", 10.50);
+INSERT INTO coffee_table VALUES (3, "Kickstart", "Guatemala", "Medium", 10.50);
+INSERT INTO coffee_table VALUES (4, "Lava Java", "Honduras", "Medium", 9.50);
+INSERT INTO coffee_table VALUES (5, "Sunrise", "Turkey", "Dark", 11.00);
+INSERT INTO coffee_table VALUES (6, "Blondie", "Brazil", "Light", 9.50);
+INSERT INTO coffee_table VALUES (7, "Cafe Frida K", "Mexico", "Medium", 10.00);
+INSERT INTO coffee_table VALUES (8, "Minas Gerais", "Brazil", "Medium", 13.50);
+INSERT INTO coffee_table VALUES (9, "Giza", "Africa", "Dark", 14.99);
+
+--display the database ordered by price.
+SELECT * FROM coffee_table 
+ORDER BY Price DESC;
+
+--display the database with names of coffee in alphabetical order.
+SELECT * FROM coffee_table
+ORDER BY Name ASC;
+
+--What is the average price of the coffee?
+SELECT AVG(price) AS "Average Price"
+FROM coffee_table;
+
+--Which are the top 3 priced coffee?
+SELECT Name, Price 
+FROM coffee_table 
+ORDER BY Price DESC
+LIMIT 3;
+
+--Which are the dark roast coffee?
+SELECT Name, Roast
+FROM coffee_table 
+WHERE Roast = "Dark";
